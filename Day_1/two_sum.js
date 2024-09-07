@@ -2,19 +2,19 @@
 
 //using two pointer
 
-// function twoSum(nums, target) {
-//     let [i,j] = [0, nums.length - 1];
-//     while(i<j) {
-//         if(nums[i] + nums[j] > target) {
-//             j--;
-//         } else if(nums[i] + nums[j] < target) {
-//             i++;
-//         } else {
-//             return [i, j];
-//         }
-//     }
-//     return [-1,-1];
-// }
+function twoSum(nums, target) {
+    let [i,j] = [0, nums.length - 1];
+    while(i<j) {
+        if(nums[i] + nums[j] > target) {
+            j--;
+        } else if(nums[i] + nums[j] < target) {
+            i++;
+        } else {
+            return [i, j];
+        }
+    }
+    return [-1,-1];
+}
 
 // using HashMap
 
