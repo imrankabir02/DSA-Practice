@@ -1,27 +1,27 @@
 // using counting sort
 
-// function sortColors(nums) {
-//   let count = [0, 0, 0];
+function sortColors(nums) {
+  let count = [0, 0, 0];
 
-//   for (let i = 0; i < nums.length; i++) {
-//     count[nums[i]]++;
-//   }
+  for (let i = 0; i < nums.length; i++) {
+    count[nums[i]]++;
+  }
 
-//   let index = 0;
+  let index = 0;
 
-//   for (let i = 0; i < count[0]; i++) {
-//     nums[index++] = 0;
-//   }
+  for (let i = 0; i < count[0]; i++) {
+    nums[index++] = 0;
+  }
 
-//   for (let i = 0; i < count[1]; i++) {
-//     nums[index++] = 1;
-//   }
+  for (let i = 0; i < count[1]; i++) {
+    nums[index++] = 1;
+  }
 
-//   for (let i = 0; i < count[2]; i++) {
-//     nums[index++] = 2;
-//   }
-//   return nums;
-// }
+  for (let i = 0; i < count[2]; i++) {
+    nums[index++] = 2;
+  }
+  return nums;
+}
 
 // using Dutch National Flag Algorithm
 
@@ -31,7 +31,6 @@ function sortColors(nums) {
     while(mid <= high) {
         if(nums[mid] === 0) {
             [nums[low], nums[mid]] = [nums[mid], nums[low]];
-
             low++;
             mid++;
         } else if(nums[mid] === 1) {
